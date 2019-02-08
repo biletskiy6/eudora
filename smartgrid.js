@@ -6,7 +6,7 @@ var settings = {
     offset: '30px', 
     mobileFirst: false, 
     container: {
-        maxWidth: '1050px', 
+        maxWidth: '1520px', 
         fields: '20px' 
     },
     breakPoints: {

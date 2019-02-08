@@ -40,6 +40,193 @@ body.home
 				border-color: green
 
 +reset()
+.container
+	+wrapper()
+.button
+	min-width: 200px
+	min-height: 65px
+	color: #fff
+	border: 2px solid #ffffff
+	text-decoration: none
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+	transition: background-color .35s ease
+	&:hover
+		background-color: $accent
+		transition: background-color .35s ease
+.header
+	position: relative
+	text-shadow: 0 0 55px #000000
+	font-size: 72px
+	font-family: $PlayfairiBoldItalic
+	letter-spacing: 0.72px
+	color: #fff
+	&--section
+		position: relative
+		color: #6e7498
+		text-shadow: none
+		display: inline-block
+		text-align: center
+		&::after, &::before
+			position: absolute
+			content: ''
+			width: 200px
+			height: 1px
+			z-index: 10
+			top: 50%
+			transform: translateY(-50%)
+			background-color: $accent
+		&::after
+			right: -30%
+		&::before
+			left: -30%
+.section-intro
+	text-align: center
+	p
+		color: #a4a8bc
+		font-size: 24px
+		letter-spacing: 0.24px
+		max-width: 800px
+		margin: 40px auto 0
+.main-header
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100vh
+	min-height: 600px
+	background-image: url("../img/header/main-bg.png")
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	&::after
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .5)
+.top-line
+	display: flex
+	align-items: center
+	min-height: 180px
+	background-color: rgba(#000, .45)
+.main-navigation
+	position: relative
+	z-index: 1
+	max-width: 920px
+	margin: 0 auto
+	flex: 1
+	padding: 0 15px
+.main-menu
+	display: flex
+	align-items: center
+	justify-content: space-between
+	li
+		&:nth-child(3)
+			a
+				font-family: $PlayfairBold
+				color: $accent
+				font-size: 72px
+				text-transform: capitalize
+	a
+		display: block
+		text-decoration: none
+		color: #fff
+		font-size: 18px
+		letter-spacing: 0.18px
+		text-transform: uppercase
+		text-shadow: 0 0 15px #000000
+		font-family: $RalewayBold
+.s-foods
+	background-color: #fefefe
+.inside-accent
+	color: $accent
+.intro
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	z-index: 1
+	width: 100%
+	max-width: 1000px
+	margin: 0 auto
+	text-align: center
+	flex: 1
+	p
+		font-size: 24px
+		text-shadow: 0 0 15px #000000
+		letter-spacing: 0.24px
+		color: #ffffff
+		margin: 20px 0 50px
+
+.secondary-button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-decoration: none
+	background-color: #fff
+	border: 2px solid #d9dcee
+	color: #a4a8bc
+	min-width: 204px
+	min-height: 65px
+	transition: all .25s ease
+	text-transform: uppercase
+	&:hover
+		background-color: $accent
+		border: none
+		color: #fff
+		transition: all .25s ease
+
+.foods
+	margin-top: 60px
+	&__content
+		display: none
+		&.active
+			display: block
+.foods-tabs
+	display: flex
+	justify-content: center
+	li
+		margin-right: 30px
+		&.food-active
+			a
+				background-color: $accent
+				border: none
+				color: #fff
+				transition: all .25s ease
+
+
+.foods-items
+	+row-flex()
+	justify-content: space-between
+.food-item
+	flex-basis: 200px
+	transition: all .5s ease
+	//display: flex
+	//flex-direction: column
+	//width: 100%
+	//height: 100%
+	//max-width: 200px
+	//margin-right: 70px
+	&:last-child
+		margin-right: 0
+	&:hover
+		.food-content
+
+.food-content
+	transition: all .5s ease-in-out
+.food-img
+	background-color: #fff
+	padding: 10px
+	display: inline-block
+
+
+
+
 
 
 
