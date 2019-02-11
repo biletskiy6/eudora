@@ -17,26 +17,32 @@
     <body class="home">
         
         <header class="main-header">
-            <div class="top-line">
+            <div class="top-line gutter">
+                <a class="logo">Eudora</a>
                 <nav class="main-navigation">
                     <ul class="main-menu">
                         <li>
-                            <a href="#">Menu</a>
+                            <a href="#">Меню</a>
                         </li>
                         <li>
-                            <a href="#">Our story</a>
+                            <a href="#">Страви</a>
                         </li>
                         <li>
                             <a href="#">Eudora</a>
                         </li>
                         <li>
-                            <a href="#">Offer</a>
+                            <a href="#">Пропозиції</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#">Контакти</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="toggle-menu">
+                     <div class="toggle-menu__row"></div>
+                     <div class="toggle-menu__row"></div>
+                     <div class="toggle-menu__row"></div>
+                  </div>
             </div>
             <div class="intro">
                 <h2 class="header">Eudora is <span class="inside-accent">simple</span> psd template</h2>
@@ -47,7 +53,7 @@
             </div>
         </header>
         <section class="s-foods">
-            <div class="section-intro">
+            <div class="section-intro gutter">
                 <h2 class="header header--section">Lorem ipsum dolor sit amet</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente praesentium excepturi atque aut saepe, aspernatur
@@ -55,92 +61,373 @@
             </div>
             <div class="container">
                 
-            
-            <div class="foods">
-                <ul class="foods-tabs">
-                    <li class="food-active">
-                        <a href="#" class="secondary-button">Десерти</a>
-                    </li>
-                    <li>
-                        <a href="#" class="secondary-button">Мясо</a>
-                    </li>
-                    <li>
-                        <a href="#" class="secondary-button">Салати</a>
-                    </li>
-                </ul>
-    
-                <div class="foods__content active">
-                    <div class="foods-items">
-                        <div class="food-item">
-                            <div class="food-img">
-                                 <img src="static/img/foods/1.jpg" alt="">
+                
+                <div class="foods">
+                    <ul class="foods-tabs">
+                        <li class="food-active">
+                            <a href="#" class="secondary-button">Десерти</a>
+                        </li>
+                        <li>
+                            <a href="#" class="secondary-button">Мясо</a>
+                        </li>
+                        <li>
+                            <a href="#" class="secondary-button">Салати</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="foods__content active">
+                        <div class="foods-items">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/desserts/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                       Текст какой-то будет про эту штуку
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
                             </div>
-                            <div class="food-content">
-                                <span class="food-content__price">34$</span>
-                                <h3 class="food-content__header">Lorem Ipsum</h3>
-                                <p class="food-content__descr">
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/desserts/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
                             </div>
-                            <a href="#" class="secondary-button">
-                                Більше
-                            </a>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/desserts/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                   Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/desserts/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/desserts/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
                         </div>
-                        <div class="food-item">
-                            <div class="food-img">
-                                 <img src="static/img/foods/1.jpg" alt="">
+                    </div>
+                    <div class="foods__content">
+                        <div class="foods-items">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/meat/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                       Текст какой-то будет про эту штуку
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
                             </div>
-                            <a href="#" class="secondary-button">
-                                Більше
-                            </a>
-                        </div>
-                        <div class="food-item">
-                            <div class="food-img">
-                                 <img src="static/img/foods/1.jpg" alt="">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/meat/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
                             </div>
-                            <a href="#" class="secondary-button">
-                                Більше
-                            </a>
-                        </div>
-                        <div class="food-item">
-                            <div class="food-img">
-                                 <img src="static/img/foods/1.jpg" alt="">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/meat/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                   Детальніше
+                                </a>
                             </div>
-                            <a href="#" class="secondary-button">
-                                Більше
-                            </a>
-                        </div>
-                        <div class="food-item">
-                            <div class="food-img">
-                                 <img src="static/img/foods/1.jpg" alt="">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/meat/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
                             </div>
-                            <a href="#" class="secondary-button">
-                                Більше
-                            </a>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/meat/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
                         </div>
-
+                    </div>
+                    <div class="foods__content">
+                        <div class="foods-items">
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/salads/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                       Текст какой-то будет про эту штуку
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/salads/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/salads/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                   Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/salads/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
+                            <div class="food-item">
+                                <div class="food-img">
+                                    <img src="static/img/foods/salads/1.jpg" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <span class="food-content__price">34$</span>
+                                    <h3 class="food-content__header">Lorem Ipsum name</h3>
+                                    <p class="food-content__descr">
+                                        Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <a href="#" class="secondary-button">
+                                    Детальніше
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="foods__content">
-                    Мясо
-                </div>
-                <div class="foods__content">
-                    Салати
-                </div>
             </div>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </section>
+        <section class="s-offer">
+            <div class="s-offer__descr">
+                <h2 class="s-offer__descr-header">
+                Check our breakfast offer
+                </h2>
+            </div>
+            <div class="s-offer__image">
+                <img src="static/img/offer/offer.png" alt="">
+            </div>
+        </section>
+        <section class="s-props">
+            <div class="props">
+                <div class="container">
+                    <div class="props__wrapper">
+                        <div class="section-intro">
+                            <h2 class="header header--section">Lorem ipsum dolor sit amet</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente praesentium excepturi atque aut saepe, aspernatur
+                            </p>
+                        </div>
+                        
+                        <div class="props-items">
+                            <div class="props-item">
+                                <img src="static/img/props/1.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                            <div class="props-item">
+                                <img src="static/img/props/2.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                            <div class="props-item">
+                                <img src="static/img/props/3.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                            <div class="props-item">
+                                <img src="static/img/props/4.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                            <div class="props-item">
+                                <img src="static/img/props/5.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                            <div class="props-item">
+                                <img src="static/img/props/6.png" alt="">
+                                <h2>Lorem ipsum dolor</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                </p>
+                                <a href="#" class="secondary-button">Більше</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-subscribe">
+            <div class="subscribe-wrapper">
+                <h2>Subscribe our newsletter</h2>
+                <div class="subscribe-wrapper__content">
+                <form action="#">
+                    <input type="text" placeholder="Ваша E-mail адреса">
+                    <input type="submit" value="Відправити">
+                </form>
+                </div>
+                
+            </div>
+        </section>
+    <footer class="s-footer">
+        <div class="container">
+            <div class="s-footer__wrapper">
+                <div class="copyright">
+                    <p>&copy; Copyright 2019 by Eudora. All rights reserved</p>
+                </div>
+                <nav class="footer-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="#">Offer</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
         <script src="static/js/scripts.min.js"></script>
     </body>
 </html>

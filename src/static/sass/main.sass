@@ -22,14 +22,11 @@ html
 		box-sizing: inherit
 
 body.home
-	font-size: 16px
+	font-size: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
-	display: flex
-	flex-direction: column
-	height: 100vh
 	overflow-x: hidden
 	input, textarea
 			border: #666 1px solid
@@ -42,9 +39,14 @@ body.home
 +reset()
 .container
 	+wrapper()
+.gutter
+	padding: 0 60px
+	+tabletx-block()
+		padding: 0 30px
 .button
 	min-width: 200px
 	min-height: 65px
+	line-height: 65px
 	color: #fff
 	border: 2px solid #ffffff
 	text-decoration: none
@@ -53,6 +55,11 @@ body.home
 	justify-content: center
 	text-transform: uppercase
 	transition: background-color .35s ease
+	+tabletx-block()
+		min-width: 180px
+		min-height: 50px
+		line-height: 50px
+		font-size: 16px
 	&:hover
 		background-color: $accent
 		transition: background-color .35s ease
@@ -71,19 +78,80 @@ body.home
 		text-align: center
 		&::after, &::before
 			position: absolute
+			display: inline-flex
+			align-items: center
 			content: ''
-			width: 200px
+			width: 25%
 			height: 1px
-			z-index: 10
-			top: 50%
-			transform: translateY(-50%)
+			top: 53%
+			transform: translateY(-53%)
 			background-color: $accent
+			+lg-block()
+				width: 20%
+			+md-block()
+				width: 15%
+			+mdx-block()
+				display: none
 		&::after
-			right: -30%
-		&::before
 			left: -30%
+			+lg-block()
+				left: -25%
+			+md-block()
+				left: -20%
+		&::before
+			right: -30%
+			+lg-block()
+				right: -25%
+			+md-block()
+				right: -20%
+	+desktop-block()
+		font-size: 65px
+	+md-block()
+		font-size: 50px
+	+tabletx-block()
+		font-size: 40px
+.toggle-menu
+	position: relative
+	display: none
+	flex-direction: column
+	justify-content: center
+	align-items: flex-end
+	//margin-left: auto
+	cursor: pointer
+	z-index: 100
+	width: 25px
+	height: 25px
+	//padding: 15px
+	+mdx-block()
+		display: flex
+	&__row
+		height: 2px
+		width: 25px
+		margin: 2px 0
+		background-color: #fff
+		position: relative
+		transition: all .5s
+		&:nth-child(2)
+			width: 19px
+		&:nth-child(3)
+			width: 13px
+.toggle-menu.toggle-menu--active .toggle-menu__row
+	background-color: #fff
+.toggle-menu.toggle-menu--active .toggle-menu__row:first-child 
+	transform: rotate(-135deg)
+	top: 6px
+	width: 100%
+.toggle-menu.toggle-menu--active .toggle-menu__row:last-child 
+	transform: rotate(-225deg)
+	top: -6px
+	width: 100%
+.toggle-menu.toggle-menu--active .toggle-menu__row:nth-child(2) 
+	opacity: 0
 .section-intro
+	padding-top: 120px
 	text-align: center
+	+tabletx-block()
+		padding-top: 70px
 	p
 		color: #a4a8bc
 		font-size: 24px
@@ -95,12 +163,13 @@ body.home
 	display: flex
 	flex-direction: column
 	width: 100%
-	height: 100vh
-	min-height: 600px
+	min-height: 100vh
+	background-color: #666
 	background-image: url("../img/header/main-bg.png")
 	background-size: cover
 	background-position: center center
 	background-repeat: no-repeat
+	padding-bottom: 50px
 	&::after
 		position: absolute
 		content: ''
@@ -109,29 +178,96 @@ body.home
 		width: 100%
 		height: 100%
 		background-color: rgba(#000, .5)
+.logo
+	display: none
+	font-family: $PlayfairBold
+	color: $accent
+	font-size: 72px
+	text-transform: capitalize
+	+mdx-block()
+		display: block
+		font-size: 65px
+	+tablet-block()
+		font-size: 48px
+	+tabletx-block()
+		font-size: 42px
+	+phoneh-block()
+		font-size: 36px
 .top-line
+
+	z-index: 1
 	display: flex
 	align-items: center
 	min-height: 180px
 	background-color: rgba(#000, .45)
+	transition: all .35s ease
+	+mdx-block()
+		justify-content: space-between
+	+tabletx-block()
+		min-height: 140px
+	&--fixed
+		width: 100%
+		position: fixed
+		background-color: rgba(#000, .9)
+		z-index: 10
+		min-height: 140px
+		transition: all .35s ease
+		+tabletx-block()
+			min-height: 100px
+		.main-menu 
+			li
+				&:nth-child(3)
+					a
+						font-size: 65px 
+
 .main-navigation
 	position: relative
 	z-index: 1
 	max-width: 920px
 	margin: 0 auto
-	flex: 1
+	flex: 1 0 100%
 	padding: 0 15px
+	+mdx-block()
+		display: none
+		transform: translateX(-9999px)
+		max-width: 100%
+		padding: 0
+		&.active
+			display: flex
+			align-items: center
+			justify-content: center
+			position: fixed
+			background-color: #000
+			z-index: 10
+			width: 100%
+			height: 100vh
+			min-height: 600px
+			top: 0
+			left: 0
+			transform: translateX(0)
+
 .main-menu
 	display: flex
 	align-items: center
 	justify-content: space-between
+	+mdx-block()
+		flex-direction: column
+		width: 100%
 	li
+		+mdx-block()
+			width: 100%
 		&:nth-child(3)
 			a
 				font-family: $PlayfairBold
 				color: $accent
 				font-size: 72px
 				text-transform: capitalize
+				+desktop-block()
+					font-size: 65px
+				+md-block()
+					font-size: 50px
+			+mdx-block()
+				display: none
 	a
 		display: block
 		text-decoration: none
@@ -141,28 +277,42 @@ body.home
 		text-transform: uppercase
 		text-shadow: 0 0 15px #000000
 		font-family: $RalewayBold
+		+mdx-block()
+			font-size: 24px
+			padding: 30px
+			display: block
+			text-align: center
 .s-foods
-	background-color: #fefefe
+	background-color: #f1f1f1
+	padding-bottom: 200px
+	+lgx-block()
+		padding-bottom: 0
 .inside-accent
 	color: $accent
 .intro
-	position: absolute
-	left: 50%
-	top: 50%
-	transform: translate(-50%, -50%)
-	z-index: 1
 	width: 100%
+	z-index: 1
 	max-width: 1000px
-	margin: 0 auto
+	margin: auto
 	text-align: center
-	flex: 1
 	p
 		font-size: 24px
 		text-shadow: 0 0 15px #000000
 		letter-spacing: 0.24px
 		color: #ffffff
 		margin: 20px 0 50px
+		+md-block()
+			font-size: 20px
+		+tabletx-block()
+			font-size: 18px
+	+mdx-block()
+		padding: 0 60px
+	+tabletx-block()
+		font-size: 18px
+		padding: 0 30px
 
+.layer-change
+	z-index: 0
 .secondary-button
 	display: inline-flex
 	align-items: center
@@ -173,8 +323,15 @@ body.home
 	color: #a4a8bc
 	min-width: 204px
 	min-height: 65px
+	line-height: 65px
 	transition: all .25s ease
 	text-transform: uppercase
+	+tabletx-block()
+		min-width: 180px
+		min-height: 50px
+		line-height: 50px
+		font-size: 16px
+
 	&:hover
 		background-color: $accent
 		border: none
@@ -190,44 +347,326 @@ body.home
 .foods-tabs
 	display: flex
 	justify-content: center
+	margin-bottom: 150px
+	+mdx-block()
+		margin-bottom: 100px
+	+tabletx-block()
+		flex-direction: column
+		align-items: center
+		margin-bottom: 100px
+	+phoneh-block()
+		margin-bottom: 50px
 	li
 		margin-right: 30px
+		+tabletx-block()
+			margin-right: 0
+			margin-bottom: 30px
+			width: 100%
 		&.food-active
 			a
 				background-color: $accent
 				border: none
 				color: #fff
 				transition: all .25s ease
+		.secondary-button
+			+tablet-block()
+				display: block
+				text-align: center
+				line-height: 65px
+
 
 
 .foods-items
 	+row-flex()
-	justify-content: space-between
+	justify-content: center
 .food-item
-	flex-basis: 200px
+	position: relative
+	text-align: center
+	+col()
+	+size(2.4)
 	transition: all .5s ease
-	//display: flex
-	//flex-direction: column
-	//width: 100%
-	//height: 100%
-	//max-width: 200px
-	//margin-right: 70px
-	&:last-child
-		margin-right: 0
+	+lgx-block()
+		+size(4)
+		text-align: center
+		margin-bottom: 60px
+	+tablet-block()
+		+size(5)
+	+tabletx-block()
+		+size(10)
+	+phoneh-block()
+		+size(12)
+	.secondary-button
+		display: block
+		line-height: 65px
+		+tabletx-block()
+			line-height: 50px
 	&:hover
-		.food-content
+
 
 .food-content
+	text-align: center
 	transition: all .5s ease-in-out
+	max-height: 0
+	opacity: 0
+	overflow: hidden
+	&.active
+		max-height: 500px
+		opacity: 1
+		transition: all .5s ease-in-out
+
+	&__price
+		font-size: 72px
+		font-family: $PlayfairiBoldItalic
+		letter-spacing: 0.72px
+		color: #e59205
+	&__header
+		font-size: 24px
+		letter-spacing: 0.24px
+		font-family: $RalewayBold
+	&__descr
+		color: #3a3a3a
+		font-size: 18px
+		margin: 15px 0
+
 .food-img
 	background-color: #fff
 	padding: 10px
 	display: inline-block
+	margin-bottom: 20px
+	transition: all .35s ease
+	&.active
+		transform: scale(1.1)
+		transition: all .25s ease
+
+	img
+		width: 100%
+		height: 100%
+		display: block
 
 
 
 
+.s-offer
+	display: flex
+	min-height: 560px
+	+lgx-block()
+		min-height: 480px
+	+mdx-block()
+		flex-direction: column
+		min-height: auto
+	&__descr
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: 1
+		background-color: $accent
+		padding-left: 30px 
+		padding-right: 30px
+		+mdx-block()
+			padding-top: 50px
+			padding-bottom: 50px
+			flex: none
+		+phoneh-block()
+			padding-top: 30px
+			padding-bottom: 30px
+		&-header
+			font-size: 72px
+			font-family: $PlayfairiBoldItalic
+			color: #fff
+			line-height: 82px
+			letter-spacing: 0.72px
+			max-width: 341px
+			+desktop-block()
+				font-size: 65px
+			+md-block()
+				font-size: 50px
+			+tabletx-block()
+				font-size: 40px
+				max-width: 100%
+				line-height: 70px
+			+phoneh-block()
+				font-size: 30px
+				line-height: 60px
+	&__image
+		flex: 2
+		+mdx-block()
+			flex: none
+		+phoneh-block()
+		img
+			width: 100%
+			height: 100%
+		+mdx-block()
 
 
+.props
+	&-items
+		+row-flex()
+		margin-top: 140px
+		+mdx-block()
+			margin-top: 100px
+		+tabletx-block()
+			justify-content: center
+	&-item
+		display: flex
+		flex-direction: column
+		text-align: center
+		+col()
+		+size(4)
+		margin-bottom: 140px
+		+mdx-block()
+			+size(6)
+			margin-bottom: 100px
+		+tabletx-block()
+			+size(8)
+		+phone-block()
+			+size(12)
+		img
+			display: block
+			margin: 0 auto
+			width: 87px
+			height: 76px
+			max-width: 87px
+			max-height: 76px
+		h2
+			font-size: 36px
+			font-family: $PlayfairBold
+			color: #6e7498
+			letter-spacing: 0.36px
+			line-height: 82px
+			margin-top: 30px
+			+mdx-block()
+				font-size: 30px
+		p
+			color: #a4a8bc
+			font-size: 18px
+			letter-spacing: 0.18px
+			line-height: 40px
+			margin: 35px 0 60px
+			+mdx-block()
+				margin: 30px 0 50px
+		.secondary-button
+			margin-top: auto
+			align-self: center
+
+.s-subscribe
+	position: relative
+	width: 100%
+	height: 637px
+	background-image: url("../img/subscribe/bg.png")
+	background-repeat: no-repeat
+	background-position: center
+.subscribe-wrapper
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	max-width: 950px
+	margin: 0 auto
+	height: 100%
+	padding-left: 30px
+	padding-right: 30px
+	h2
+		color: #fff
+		font-family: $PlayfairiBoldItalic
+		font-size: 72px
+		line-height: 82px
+		letter-spacing: 0.72px
+		+desktop-block()
+			font-size: 65px
+		+md-block()
+			font-size: 50px
+		+tabletx-block()
+			font-size: 40px
+			line-height: 70px
+
+	&__content
+		width: 100%
+		padding: 0 80px
+		+tabletx-block()
+			padding: 0
+		form
+			display: flex
+			flex-direction: column
+			input[type="text"]
+				display: block
+				padding: 20px 0
+				text-align: center
+				border: 2px solid #fff
+				background-color: transparent
+				color: #fff
+				margin: 80px 0
+				+placeholder
+					font-family: $PlayfairBold
+					opacity: 0.8
+					color: #fff
+					text-transform: uppercase
+					+tabletx-block()
+						font-size: 14px
+				+mdx-block()
+					margin: 50px 0
+			input[type=submit]
+				align-self: center
+				background-color: $accent
+				color: #fff
+				padding: 20px 60px
+				border: none
+				cursor: pointer
+				text-transform: uppercase
+				font-family: $RalewayBold
+
+.s-footer
+	position: relative
+	padding: 70px 0
+	+mdx-block()
+		font-size: 16px
+		padding: 60px 0
+		+tablet-block()
+			padding: 50px 0
+	&__wrapper
+		+row-flex()
+		color: #a4a8bc
+		+tablet-block()
+			flex-direction: column
+			align-items: center
+.copyright
+	+col()
+	+size(6)
+	+tablet-block()
+		text-align: center
+		margin-bottom: 30px
+		+size(12)
+.footer-menu
+	+col()
+	+size(6)
+	+tablet-block()
+		+size(12)
+	ul
+		display: flex
+		justify-content: flex-end
+		+tablet-block()
+			justify-content: center
+		+phoneh-block()
+			flex-direction: column
+			align-items: center
+			margin-top: 15px
+		li
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+			+mdx-block()
+				margin-right: 25px
+			+phoneh-block()
+				margin-right: 0
+				margin-bottom: 10px
+
+
+
+
+		a
+			text-decoration: none
+			color: inherit
+			display: block
+			text-transform: uppercase
+			letter-spacing: 0.18px
 
 @import "media"
