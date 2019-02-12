@@ -15,7 +15,7 @@
 
 html, body
 	height: 100%
-
+ 
 html
 	box-sizing: border-box
 	*, *:before, *:after
@@ -63,6 +63,13 @@ body.home
 	&:hover
 		background-color: $accent
 		transition: background-color .35s ease
+	&--calculator
+		border: 2px solid rgba(#000, .1)
+		margin-left: auto
+		margin-top: 30px
+		&:hover
+			color: #fff
+			border: 2px solid #fff
 .header
 	position: relative
 	text-shadow: 0 0 55px #000000
@@ -150,6 +157,7 @@ body.home
 .section-intro
 	padding-top: 120px
 	text-align: center
+	margin-bottom: 50px
 	+tabletx-block()
 		padding-top: 70px
 	p
@@ -658,15 +666,170 @@ body.home
 			+phoneh-block()
 				margin-right: 0
 				margin-bottom: 10px
-
-
-
-
 		a
 			text-decoration: none
 			color: inherit
 			display: block
 			text-transform: uppercase
 			letter-spacing: 0.18px
+
+.s-calculator
+	padding-bottom: 40px
+	+tablet-block()
+		padding-bottom: 0
+
+.mutliSelect
+	li 
+		display: flex
+		//justify-content: space-between
+		align-items: center
+		//margin-bottom: 20px
+		border-bottom: 1px solid #f1f1f1
+		//padding-bottom: 15px
+		//padding-left: 15px
+		//padding-right: 15px
+		&:last-child
+			border-bottom: none
+			margin-bottom: 0
+		label
+			display: flex
+			align-items: center
+			flex: 1
+			padding: 30px 20px 30px
+			span
+				margin-left: 10px
+		input[type=number]
+			width: 80px
+			padding: 10px
+			display: block
+			border: 1px solid rgba(#000, .1)
+
+.dropdown 
+	ul 
+		//margin: -1px 0 0 0 
+		//padding-top: 15px
+		padding-right: 20px
+	dd 
+		position: relative 
+		ul 
+			background-color: #fff 
+			color: #000
+			display: none 
+			left: 0px 
+			border: 1px solid #f1f1f1
+			//padding: 2px 15px 2px 5px 
+			//position: absolute 
+			top: 2px 
+			width: 100%
+			list-style: none 
+			max-height: 400px 
+			overflow: auto 
+			li 
+				a 
+					padding: 5px 
+					display: block 
+					&:hover 
+						background-color: #fff 
+	dt 
+		a 
+			background-color: $accent 
+			display: block 
+			padding: 15px
+			min-height: 25px 
+			line-height: 24px 
+			overflow: hidden 
+			border: 0 
+	span
+		display: block
+		text-align: center
+		text-transform: uppercase
+		font-size: 18px
+		font-family: $RalewayBold
+		&.value 
+			display: none 
+a 
+	color: #fff 
+.dropdown dd,
+.dropdown dt 
+	margin: 0px 
+	padding: 0px 
+.dropdown a,
+.dropdown a:visited 
+	color: #fff 
+	text-decoration: none 
+	outline: none 
+	font-size: 12px 
+
+.calculate
+	color: #000
+	text-decoration: none
+.calculator
+	&__wrapper
+		display: flex
+		flex-direction: column
+	&-results
+		margin-top: 40px
+		h2
+			font-family: $PlayfairiBoldItalic
+			font-size: 26px
+			color: #6e7498
+			margin-bottom: 15px
+			+tablet-block()
+				font-size: 23px
+.results
+	+row-flex()
+	//margin-top: 60px
+	.result
+		+col()
+		+size(3)
+		&-header
+			font-size: 23px
+			font-family: $RalewayBold
+			+tablet-block()
+				font-size: 20px
+		&-value
+			font-family: $PlayfairiBoldItalic
+			font-size: 20px
+			+tablet-block()
+				font-size: 18px
+		+tablet-block()
+			+size(6)
+			margin-bottom: 50px
+		+phoneh-block()
+			+size(12)
+.user-choise
+	display: none
+	margin-bottom: 30px
+	&.active
+		display: block
+	h2
+		font-family: $PlayfairiBoldItalic
+		font-size: 26px
+		color: #6e7498
+		margin-bottom: 15px
+		+tablet-block()
+			font-size: 23px
+
+.user-items
+	+row-flex()
+	align-items: center
+	.user-item
+		+col()
+		text-transform: uppercase
+		font-size: 16px
+		font-family: $PlayfairiBoldItalic
+		color: #a4a8bc
+		&__separator
+			display: inline-block
+			background-color: $accent
+			color: #fff
+			padding: 5px 20px
+			border-radius: 50%	
+			&:last-child
+				display: none
+		input[type=number]
+			width: 40px
+			margin-left: 10px
+
 
 @import "media"
